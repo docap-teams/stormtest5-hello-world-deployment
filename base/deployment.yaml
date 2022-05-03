@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: [prefix]-hello-world
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      run: [prefix]-hello-world
+  template:
+    metadata:
+      labels:
+        run: [prefix]-hello-world
+    spec:
+      containers:
+      - image: quay.io/[prefix]mitchley/hello-world-app:X
+        imagePullPolicy: IfNotPresent
+        name: [prefix]-hello-world
+        ports:
+        - containerPort: 5000
+          protocol: TCP
