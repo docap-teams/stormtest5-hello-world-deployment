@@ -4,4 +4,4 @@ bases:
 - ../base
 images:
 - name: quay.io/smidigstorm/hello-world-app
-  newTag: "2"
+  newTag: "5"
