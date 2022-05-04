@@ -15,7 +15,7 @@ spec:
         run: [prefix]-hello-world
     spec:
       containers:
-      - image: quay.io/[prefix]mitchley/hello-world-app:X
+      - image: quay.io/[your_quay_account]/hello-world-app:X
         imagePullPolicy: IfNotPresent
         name: [prefix]-hello-world
         ports:
