@@ -3,5 +3,5 @@ kind: Kustomization
 bases:
 - ../base
 images:
-- name: quay.io/[your_quay_account]/hello-world-app
-  newTag: "1"
+- name: quay.io/smidigstorm/hello-world-app
+  newTag: "2"

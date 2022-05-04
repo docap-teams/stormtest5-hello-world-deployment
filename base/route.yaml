@@ -2,14 +2,14 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   labels:
-    app.kubernetes.io/instance: [prefix]-hello-world
-  name: [prefix]-hello-world
+    app.kubernetes.io/instance: stormtest5-hello-world
+  name: stormtest5-hello-world
 spec:
-  host: [prefix]-hello-world-test.docap-kurs-test-bx2-4x16-16fc47728e8aae593a5208221954defe-0000.eu-gb.containers.appdomain.cloud
+  host: stormtest5-hello-world-test.docap-kurs-test-bx2-4x16-16fc47728e8aae593a5208221954defe-0000.eu-gb.containers.appdomain.cloud
   port:
     targetPort: 5000
   to:
     kind: Service
-    name: [prefix]-hello-world
+    name: stormtest5-hello-world
     weight: 100
   wildcardPolicy: None

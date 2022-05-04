@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: [prefix]-hello-world
+  name: stormtest5-hello-world
 spec:
   replicas: 1
   strategy:
     type: Recreate
   selector:
     matchLabels:
-      run: [prefix]-hello-world
+      run: stormtest5-hello-world
   template:
     metadata:
       labels:
-        run: [prefix]-hello-world
+        run: stormtest5-hello-world
     spec:
       containers:
-      - image: quay.io/[your_quay_account]/hello-world-app:X
+      - image: quay.io/smidigstorm/hello-world-app:X
         imagePullPolicy: IfNotPresent
-        name: [prefix]-hello-world
+        name: stormtest5-hello-world
         ports:
         - containerPort: 5000
           protocol: TCP
